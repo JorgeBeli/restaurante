@@ -1,0 +1,53 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(45deg, rgba(20, 243, 217, .5), rgba(20, 173, 243, .5), rgba(20, 89, 243, .5));
+    margin: 1.5rem;
+}
+
+.navBar {
+    .menu {
+        .menuList {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            column-gap: .5rem;
+            li {
+                list-style: none;
+                background-color: #ffc600;
+                text-align: center;
+                a {
+                text-decoration: none;
+                color: #000;
+                font-family: $familia;
+                text-transform: $mayuscula;
+                font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.top {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "img img priceUp" "img img priceDown";
+    header {
+        grid-area: img;
+        background-image: url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/taco.jpg);
+    }
+    .priceUp,
+    .priceDown {
+        background-color: #ffc600;
+    }
+    .priceUp {
+        grid-area: priceUP;
+    }
+    .priceDown {
+        grid-area: priceDown;
+    }
+}

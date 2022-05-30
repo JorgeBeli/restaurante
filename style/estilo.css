@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(45deg, rgba(20, 243, 217, 0.5), rgba(20, 173, 243, 0.5), rgba(20, 89, 243, 0.5));
+  margin: 1.5rem;
+}
+
+.navBar .menu .menuList {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
+}
+
+.navBar .menu .menuList li {
+  list-style: none;
+  background-color: #ffc600;
+  text-align: center;
+}
+
+.navBar .menu .menuList li a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.top {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+      grid-template-areas: "img img priceUp" "img img priceDown";
+}
+
+.top header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: img;
+  background-image: url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/taco.jpg);
+}
+
+.top .priceUp,
+.top .priceDown {
+  background-color: #ffc600;
+}
+
+.top .priceUp {
+  grid-area: priceUP;
+}
+
+.top .priceDown {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: priceDown;
+}
+/*# sourceMappingURL=estilo.css.map */
