@@ -5,7 +5,7 @@
 
 body {
   background-image: linear-gradient(45deg, rgba(49, 119, 110, 0.2), rgba(33, 145, 198, 0.5), rgba(4, 81, 248, 0.8));
-  margin: 1.5rem;
+  margin: 2rem;
 }
 
 .navBar .menu .menuList {
@@ -13,22 +13,27 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  -webkit-column-gap: .5rem;
-          column-gap: .5rem;
+  -webkit-column-gap: .35rem;
+          column-gap: .35rem;
 }
 
 .navBar .menu .menuList li {
   list-style: none;
   background-color: #ffc600;
-  text-align: center;
+  padding: .15rem 0;
 }
 
 .navBar .menu .menuList li a {
+  display: block;
+  text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #272727;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-transform: uppercase;
-  font-weight: 700;
+  font-size: .65rem;
+  font-weight: 900;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  padding: .15rem;
 }
 
 .top {
@@ -67,11 +72,18 @@ body {
 .top header h1,
 .top header p {
   text-transform: capitalize;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 1.5rem;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  background-color: #ffc600;
+  color: #272727;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: .2rem;
+  font-weight: 900;
 }
 
 .top header h1 {
   font-size: 1rem;
+  margin-bottom: .85rem;
 }
 
 .top header p {
@@ -81,6 +93,7 @@ body {
 .top .priceUp,
 .top .priceDown {
   background-color: #ffc600;
+  color: #272727;
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -88,7 +101,8 @@ body {
   text-transform: capitalize;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
 }
 
 .top .priceUp :nth-child(2),
@@ -106,5 +120,40 @@ body {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: cta2;
+}
+
+.features {
+  display: -ms-grid;
+  display: grid;
+  gap: .65rem;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.features .feature {
+  background-color: #fff;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  font-weight: 900;
+  margin: 1rem 0;
+  padding: .5rem 0;
+}
+
+.features .feature span {
+  font-size: 1.85rem;
+}
+
+.features .feature h2 {
+  text-transform: capitalize;
+  font-size: .6rem;
+  margin-bottom: .5rem;
+}
+
+.features .feature p {
+  font-size: 15px;
+  opacity: .5;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=estilo.css.map */

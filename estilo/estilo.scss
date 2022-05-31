@@ -7,7 +7,7 @@
 
 body {
     background-image: linear-gradient(45deg, rgba(49, 119, 110, 0.2), rgba(33, 145, 198, 0.5), rgba(4, 81, 248, 0.8));
-    margin: 1.5rem;
+    margin: 2rem;
 }
 
 .navBar {
@@ -15,17 +15,22 @@ body {
         .menuList {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            column-gap: .5rem;
+            column-gap: .35rem;
             li {
                 list-style: none;
-                background-color: #ffc600;
-                text-align: center;
+                background-color: $amarillo;
+                padding: .15rem 0;
                 a {
+                display: block;
+                text-align: center;
                 text-decoration: none;
-                color: #000;
+                color: $negro;
                 font-family: $familia;
                 text-transform: $mayuscula;
-                font-weight: 700;
+                font-size: .65rem;
+                font-weight: 900;
+                text-shadow: $sombra;
+                padding: .15rem;
                 }
             }
         }
@@ -50,10 +55,17 @@ body {
         h1,
         p {
             text-transform: $primera;
-            margin: 0 0 0 1rem;
+            margin: 0 0 0 1.5rem;
+            text-shadow: $sombra;
+            background-color: $amarillo;
+            color: $negro;
+            font-family: $familia;
+            padding: .2rem;
+            font-weight: 900;
         }
         h1 {
-            font-size: 1rem;
+            font-size: 1rem;  
+            margin-bottom: .85rem;    
         }
         p {
             font-size: .55rem;
@@ -61,14 +73,16 @@ body {
     }
     .priceUp,
     .priceDown {
-        background-color: #ffc600;
+        background-color: $amarillo;
+        color: $negro;
         display: grid;
         place-content: center;
         text-align: center;
         text-transform: capitalize;
         font-family: $familia;
         font-weight: 300;
-        font-size: 2.5rem;
+        font-size: 2rem;
+        text-shadow: $sombra;
         :nth-child(2) {
             font-size: .6rem;
         }
@@ -78,5 +92,34 @@ body {
     }
     .priceDown {
         grid-area: cta2;
+    }
+}
+
+.features {
+    display: grid;
+    gap: .65rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .feature {
+        background-color: $blanco;
+        text-align: center;
+        font-family: $familia;
+        text-shadow: $sombra;
+        font-weight: 900;
+        margin: 1rem 0;
+        padding: .5rem 0;
+        span {
+            font-size: 1.85rem;
+        }
+        h2 {
+            text-transform: $primera;
+            font-size: .6rem;
+            margin-bottom: .5rem;
+        }
+        p {
+            font-size: 15px;
+            opacity: .5;
+            margin: 0;
+            padding: 0;
+        }
     }
 }
