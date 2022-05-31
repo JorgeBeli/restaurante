@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: linear-gradient(45deg, rgba(20, 243, 217, 0.5), rgba(20, 173, 243, 0.5), rgba(20, 89, 243, 0.5));
+  background-image: linear-gradient(45deg, rgba(49, 119, 110, 0.2), rgba(33, 145, 198, 0.5), rgba(4, 81, 248, 0.8));
   margin: 1.5rem;
 }
 
@@ -26,7 +26,7 @@ body {
 .navBar .menu .menuList li a {
   text-decoration: none;
   color: #000;
-  font-family: "Raleway", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -35,7 +35,8 @@ body {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-      grid-template-areas: "img img priceUp" "img img priceDown";
+      grid-template-areas: "hero hero cta1" "hero hero cta2";
+  margin-top: 1rem;
 }
 
 .top header {
@@ -43,22 +44,67 @@ body {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-area: img;
+  grid-area: hero;
   background-image: url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/taco.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top header h1,
+.top header p {
+  text-transform: capitalize;
+  margin: 0 0 0 1rem;
+}
+
+.top header h1 {
+  font-size: 1rem;
+}
+
+.top header p {
+  font-size: .55rem;
 }
 
 .top .priceUp,
 .top .priceDown {
   background-color: #ffc600;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.top .priceUp :nth-child(2),
+.top .priceDown :nth-child(2) {
+  font-size: .6rem;
 }
 
 .top .priceUp {
-  grid-area: priceUP;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: cta1;
 }
 
 .top .priceDown {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
-  grid-area: priceDown;
+  grid-area: cta2;
 }
 /*# sourceMappingURL=estilo.css.map */
